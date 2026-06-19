@@ -1,7 +1,7 @@
-<html>
-  <head>
-
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18164975825"></script>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+ <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18164975825"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
@@ -24,18 +24,149 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-TPCTTVD6');</script>
 <!-- End Google Tag Manager -->
-  </head>
-  <body>
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pagamento Confirmado</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#f5f7fa;
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+}
+
+.container{
+    background:#fff;
+    max-width:700px;
+    width:100%;
+    border-radius:16px;
+    padding:40px 30px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+.logo{
+    width:180px;
+    max-width:80%;
+    display:block;
+    margin:0 auto 30px;
+}
+
+.success-icon{
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    background:#16a34a;
+    color:#fff;
+    font-size:48px;
+    font-weight:bold;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:0 auto 25px;
+}
+
+h1{
+    color:#16a34a;
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.subtitle{
+    font-size:18px;
+    color:#444;
+    margin-bottom:20px;
+    line-height:1.5;
+}
+
+.order-number{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:25px;
+    font-size:18px;
+}
+
+.order-number strong{
+    color:#16a34a;
+}
+
+.info-box{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:12px;
+    padding:25px;
+    text-align:left;
+}
+
+.info-box p{
+    margin-bottom:15px;
+    line-height:1.7;
+    color:#333;
+}
+
+.info-box p:last-child{
+    margin-bottom:0;
+}
+
+.highlight{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:30px;
+    color:#666;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+    .container{
+        padding:30px 20px;
+    }
+
+    h1{
+        font-size:26px;
+    }
+
+    .subtitle{
+        font-size:16px;
+    }
+
+    .order-number{
+        font-size:16px;
+    }
+
+    .success-icon{
+        width:75px;
+        height:75px;
+        font-size:40px;
+    }
+}
+</style>
+</head>
+
+<body>
 
 
     <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TPCTTVD6"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-
-    Servidor com instabilidade.
-
-    
     <!-- Event snippet for Compra (1) conversion page -->
 <script>
   gtag('event', 'conversion', {
@@ -44,5 +175,68 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       // 'new_customer': true /* calculate dynamically, populate with true/false */,
   });
 </script>
-  </body>
+
+<div class="container">
+
+    <img src="logo.png" alt="Logo" class="logo">
+
+    <div class="success-icon">✓</div>
+
+    <h1>Pagamento Confirmado!</h1>
+
+    <p class="subtitle">
+        Recebemos seu pagamento via PIX com sucesso.
+    </p>
+
+    <div class="order-number">
+        Número do Pedido:
+        <strong id="pedidoNumero"></strong>
+    </div>
+
+    <div class="info-box">
+
+        <p>
+            Seu pagamento foi processado e registrado em nosso sistema.
+        </p>
+
+        <p>
+            O prazo estimado para análise e conclusão do processo é de
+            <span class="highlight">04 a 06 dias úteis</span>.
+        </p>
+
+        <p>
+            Todas as informações, atualizações e detalhes do seu protocolo
+            serão enviadas para o endereço de e-mail informado durante o cadastro.
+        </p>
+
+        <p>
+            Recomendamos acompanhar sua caixa de entrada, incluindo as pastas
+            Spam, Promoções e Lixo Eletrônico.
+        </p>
+
+        <p>
+            Agradecemos pela confiança e preferência.
+        </p>
+
+    </div>
+
+    <div class="footer">
+        © 2026 - Todos os direitos reservados
+    </div>
+
+</div>
+
+<script>
+function gerarNumeroPedido() {
+    const ano = new Date().getFullYear();
+    const aleatorio = Math.floor(100000 + Math.random() * 900000);
+
+    document.getElementById('pedidoNumero').textContent =
+        'PED-' + ano + '-' + aleatorio;
+}
+
+gerarNumeroPedido();
+</script>
+
+</body>
 </html>
